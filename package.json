@@ -1,0 +1,59 @@
+{
+  "name": "bookstack",
+  "version": "2.0.0",
+  "description": "The next big thing",
+  "main": "server.js",
+  "dependencies": {
+    "async": "3.2.0",
+    "aws-sdk": "2.721.0",
+    "axios": "^0.21.1",
+    "bad-words": "3.0.3",
+    "bcryptjs": "2.4.3",
+    "bluebird": "3.7.2",
+    "body-parser": "1.19.0",
+    "bootstrap": "4.5.2",
+    "bootstrap-scss": "4.5.2",
+    "concurrently": "5.3.0",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "8.2.0",
+    "express": "^4.17.1",
+    "express-session": "1.17.1",
+    "heic-convert": "1.2.3",
+    "heroku-ssl-redirect": "0.0.4",
+    "jquery": "^3.5.1",
+    "moment-timezone": "0.5.31",
+    "mongodb": "3.5.9",
+    "mongoose": "5.9.26",
+    "mongoose-paginate-v2": "1.3.9",
+    "morgan": "^1.10.0",
+    "multer": "1.4.2",
+    "nodemailer": "6.4.10",
+    "popper.js": "1.16.1",
+    "request-promise": "4.2.6",
+    "socket.io": "2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "run-client": "cd client && npm start",
+    "dev": "concurrently -n 'server,client' -c 'blue,green' \"nodemon --delay 1500ms server.js\" \"npm run run-client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcr7467/UCLABookStack2.0.git"
+  },
+  "author": "JC & team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcr7467/UCLABookStack2.0/issues"
+  },
+  "homepage": "https://github.com/jcr7467/UCLABookStack2.0#readme",
+  "events": {
+    "restart": "fuser -k 8000/tcp ; fuser -k 3000/tcp"
+  }
+}

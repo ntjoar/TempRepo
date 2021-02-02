@@ -1,0 +1,20 @@
+#JC's ignores
+client/node_modules
+node_modules
+.DS_Store
+.idea
+client/.eslintcache
+.env
+.env2
+JCimages
+
+#Bryan's ignores
+
+
+#Nathan's ignores
+
+
+#Noah's ignores
+
+
+#Dapo's ignores
