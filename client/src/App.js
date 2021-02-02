@@ -8,6 +8,8 @@ import {
 // import withContext from './Context' // for later
 
 // Components Import
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import HomePage from './components/Home/Home';
 import SignIn from './components/Signin/SignIn';
 import SignUp from './components/Signup/SignUp';
@@ -29,6 +31,7 @@ export default class App extends Component {
   render() {
     return(
       <Router>
+        <Header />
         <Switch>
           <Route exact path = "/" component={HomePage} />
           <Route path = "/signup" component={SignUp} />
@@ -46,6 +49,7 @@ export default class App extends Component {
           <Route path = "/upload" component={UploadItem} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     )}
 }
